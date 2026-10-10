@@ -4,6 +4,10 @@
 
 The goal of Nexora-AI is to go beyond basic question answering by enabling an AI assistant to retrieve relevant information, use tools, remember important details, and respond to user queries with contextual answers.
 
+🚀 Live Demo
+
+Try Nexora-AI: [Open Live Application](https://nexora-ai-jsuz.onrender.com/)
+
 ## ✨ Features
 
 - **AI-Powered Conversations:** Interact with a Gemini-powered assistant using natural language.
