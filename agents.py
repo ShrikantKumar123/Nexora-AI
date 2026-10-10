@@ -26,7 +26,7 @@ Path("data").mkdir(exist_ok=True) # To create the data folder if not exist
 DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 
 ALLOWED_MODELS = {
-    "gemini-3.8-flash"
+    "gemini-3.8-flash",
     "gemini-2.5-flash",
     "gemini-2.5-pro",
     "gemini-2.5-flash-lite", # Included the lite version if needed
@@ -51,6 +51,17 @@ AVAILABLE CAPABILITIES:
 7. Mathematical calculations using the calculator tool.
 
 TOOL USAGE RULES:
+
+0. WEATHER QUERIES:
+   - For current weather, temperature, humidity, rainfall,
+     or weather forecasts, use weather_search first.
+   - Do not use Tavily web search for weather queries when
+     weather_search is available.
+   - Pass the requested city to weather_search.
+   - Use web search only if the weather tool is unavailable,
+     fails, or the user specifically requests web sources
+     or weather-related news.
+   - Never invent current weather conditions.
 
 1. WEB SEARCH:
    - Use Tavily Search for questions about current events, latest news,
@@ -116,6 +127,7 @@ TOOL USAGE RULES:
    - Do not use this tool for general summarization, rewriting,
      grammar correction, or translation unless text statistics
      are also requested.
+
 
 RESPONSE GUIDELINES:
    - Answer the user's actual question first.

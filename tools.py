@@ -142,7 +142,7 @@ def analyze_text(text: str) -> str:
 
 
 @tool
-def get_current_weather(location: str) -> str:
+def weather_search(location: str) -> str:
     """
     Get the current real-time weather for a given city or location.
 
@@ -272,5 +272,5 @@ tools = [
     web_search,
     get_current_datetime,
     analyze_text,
-    get_current_weather
+    weather_search
 ]
